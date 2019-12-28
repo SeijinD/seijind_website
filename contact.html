@@ -36,7 +36,7 @@
     <div class="container text-center">
         <br><br>
         <h2 >CONTACT</h2>
-        <form method="POST" name="contact-form" action="mail.php">
+        <form method="POST" name="contact-form" action="php/mail.php">
             <div class="form-group row ">
                 <div class="col">
                     <input class="form-control form-control-lg" id="name" name="name" placeholder="Name" type="text" required>
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group row">
                 <div class="col">
-                    <a class="btn btn-lg btn-primary btn-block bg-dark format-text" onclick="validateForm()">Send</a>
+                    <button class="btn btn-lg btn-primary btn-block bg-dark format-text" name="submit"  type="submit" onclick="validateForm()">Send</button>
                 </div>
             </div>
             <div class="form-group row">
