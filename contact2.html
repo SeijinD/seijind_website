@@ -33,38 +33,42 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container text-center">
         <br><br>
-        <h2 class="text-center">Επικοινωνία</h2>
-        <div class="row justify-content-center">
-            <form method="POST">
-                <div class="form-group row ">
-                    <div class="col">
-                        <input class="form-control form-control-lg" id="name" name="name" placeholder="Όνομα" type="text" required>
-                    </div>
+        <h2>Επικοινωνία</h2>
+        <form method="POST" name="contact-form" action="mail.php">
+            <div class="form-group row">
+                <div class="col">
+                    <input class="form-control form-control-lg" id="name" name="name" placeholder="Όνομα" type="text" required>
                 </div>
-                <div class="form-group row">
-                    <div class="col">
-                        <input class="form-control form-control-lg" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col">
-                        <textarea class="form-control form-control-lg" id="comments" name="comments" placeholder="Σχολίο" rows="5"></textarea>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col">
-                        <button class="btn btn-lg btn-primary btn-block bg-dark format-text" type="submit">Send</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="row text-center">
-            <div class="col">
-                <p> Email: seijindemon@protonmail.com , seijindemon@ieee.org </p>
             </div>
-        </div>
+            <div class="form-group row">
+                <div class="col">
+                    <input class="form-control form-control-lg" id="email" name="email" placeholder="Email" type="email" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <input class="form-control form-control-lg" id="subject" name="subject" placeholder="Θέμα" type="text" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <textarea class="form-control form-control-lg" id="comments" name="comments" placeholder="Σχολίο" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <a class="btn btn-lg btn-primary btn-block bg-dark format-text" onclick="validateForm2()">Στείλε</a>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <label id="status"></label>
+                </div>
+            </div>
+        </form>
+        <p> Email: seijindemon@protonmail.com , seijindemon@ieee.org </p>
     </div>
 </body>
 </html>
