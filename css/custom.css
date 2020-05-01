@@ -4,3 +4,10 @@
     font-weight: bold;
     color: white;
 }
+
+.coming-soon{
+    text-align: center;
+    margin-top: 20%;
+    font-style: italic;
+    font-weight: bolder;
+}
