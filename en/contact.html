@@ -3,78 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/custom.css">
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/custom.js"></script>
 </head>
 <body style="background-color: gray" class="format-text">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark format-text">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"> SeijinD </a>
-            </div>
-            <div class="nav navbar-nav">
-                <ul class="navbar-nav ml-auto">
-                    <!-- Right Side Of Navbar-->
-                    <li>
-                        <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link" href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link" href="skills.html">Skills</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link" href="webinars.html">Webinars</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link active" href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a class="nav-item nav-link" href="../el/index.html">Gr</a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <a class="navbar-brand" href="index.html"> SeijinD </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="webinars.html">Webinars</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../el/index.html">Gr</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container text-center">
+    <br><br>
+    <h2 >CONTACT</h2>
+    <form method="POST" name="contact-form" action="../php/mail.php">
+        <div class="form-group row ">
+            <div class="col">
+                <input class="form-control form-control-lg" id="name" name="name" placeholder="Name" type="text" required>
             </div>
         </div>
-    </nav>
-    <div class="container text-center">
-        <br><br>
-        <h2 >CONTACT</h2>
-        <form method="POST" name="contact-form" action="../php/mail.php">
-            <div class="form-group row ">
-                <div class="col">
-                    <input class="form-control form-control-lg" id="name" name="name" placeholder="Name" type="text" required>
-                </div>
+        <div class="form-group row">
+            <div class="col">
+                <input class="form-control form-control-lg" id="email" name="email" placeholder="Email" type="email" required>
             </div>
-            <div class="form-group row">
-                <div class="col">
-                    <input class="form-control form-control-lg" id="email" name="email" placeholder="Email" type="email" required>
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <input class="form-control form-control-lg" id="subject" name="subject" placeholder="Subject" type="text" required>
             </div>
-            <div class="form-group row">
-                <div class="col">
-                    <input class="form-control form-control-lg" id="subject" name="subject" placeholder="Subject" type="text" required>
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <textarea class="form-control form-control-lg" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
             </div>
-            <div class="form-group row">
-                <div class="col">
-                    <textarea class="form-control form-control-lg" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <button class="btn btn-lg btn-primary btn-block bg-dark format-text" name="submit"  type="submit" onclick="validateForm()">Send</button>
             </div>
-            <div class="form-group row">
-                <div class="col">
-                    <button class="btn btn-lg btn-primary btn-block bg-dark format-text" name="submit"  type="submit" onclick="validateForm()">Send</button>
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <label id="status"></label>
             </div>
-            <div class="form-group row">
-                <div class="col">
-                    <label id="status"></label>
-                </div>
-            </div>
-        </form>
-        <p> Email: seijindemon@protonmail.com , seijindemon@ieee.org </p>
-    </div>
+        </div>
+    </form>
+    <p> Email: seijindemon@protonmail.com , seijindemon@ieee.org </p>
+</div>
 </body>
 </html>
