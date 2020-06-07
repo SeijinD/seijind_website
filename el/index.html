@@ -10,7 +10,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/custom.js"></script>
 </head>
-<body style="background-color: gray" class="format-text">
+<body style="background-color: gray" class="format-text" onload="loading()">
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <a class="navbar-brand" href="index.html"> SeijinD </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,9 +88,11 @@
                 <div class="row">
                     <div class="col">
                         <br><br><br>
-                        <a href="../resourses/files/CV-English.pdf" download>
-                            <button class="btn btn-lg btn-primary btn-block bg-dark format-text" type="submit">Download CV</button>
-                        </a>
+                        <div id="loading" class="hide">
+                            <a href="../resourses/files/CV-English.pdf" download>
+                                <button class="btn btn-lg btn-primary btn-block bg-dark format-text" type="submit">Download CV</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

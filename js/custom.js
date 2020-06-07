@@ -64,14 +64,16 @@ function validateForm2()
     document.getElementById('contact-form').submit();
 }
 
-function setCookie(cname,cvalue,exdays) {
+function setCookie(cname,cvalue,exdays)
+{
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
+function getCookie(cname)
+{
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
@@ -87,7 +89,8 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
+function checkCookie()
+{
     var user=getCookie("username");
     if (user != "") {
         alert("Welcome again " + user);
@@ -99,7 +102,8 @@ function checkCookie() {
     }
 }
 
-function checkCookie2() {
+function checkCookie2()
+{
     var user=getCookie("username");
     if (user != "") {
         alert("Καλώς ήρθατε ξανά " + user);
@@ -109,4 +113,14 @@ function checkCookie2() {
             setCookie("username", user, 30);
         }
     }
+}
+
+function loading()
+{
+    setTimeout(show, 3000);
+}
+
+function show()
+{
+    document.getElementById("loading").className="show";
 }
